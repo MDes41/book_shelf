@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BookShelf</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <% flash.each do |type, message| %>
+    <%= message %>
+  <% end %>
+
+
+  <p>
+    <% if most_recent_book %>
+      <strong>Newest book:</strong> <%= most_recent_book.title %>
+    <% end %>
+  </p>
+
+<%= yield %>
+
+</body>
+</html>

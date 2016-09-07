@@ -1,0 +1,9 @@
+<h1>All Books</h1>
+
+<%= link_to "Add New Book To The Shelf", new_book_path %>
+
+<ul>
+  <% @books.each do |book| %>
+  <li><%= link_to book.title, book_path(book) %> = <%= book.price %> - <%= book.quantity %></li>
+  <% end %>
+</ul>

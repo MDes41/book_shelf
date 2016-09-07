@@ -1,0 +1,11 @@
+<h1><%= @book.title %> - <%= @book.quantity %></h1>
+<h3><%= @book.price %></h3>
+<p>
+  <%= link_to "Edit Book", edit_book_path %>
+</p>
+<p>
+  <%= link_to "Delete", book_path(@book), method: :delete %>
+</p>
+</p>
+<p>
+  <%= link_to "Back to Books Index", books_path %>
